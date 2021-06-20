@@ -1,0 +1,8 @@
+window_taskbar-for-GMS1/*
+
+window_taskbar-for-GMS2/*
+!window_taskbar-for-GMS2/assetpackage.yy
+
+window_taskbar-for-GMS2.3+/*
+!window_taskbar-for-GMS2.3+/window_taskbar_23.yyp
+!window_taskbar-for-GMS2.3+/metadata.json

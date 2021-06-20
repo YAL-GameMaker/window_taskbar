@@ -1,0 +1,98 @@
+{
+  "optionsFile": "options.json",
+  "options": [],
+  "exportToGame": true,
+  "supportedTargets": 113497714299118,
+  "extensionVersion": "1.0.0",
+  "packageId": "",
+  "productId": "",
+  "author": "",
+  "date": "2019-12-12T01:34:29",
+  "license": "Proprietary",
+  "description": "",
+  "helpfile": "",
+  "iosProps": true,
+  "tvosProps": false,
+  "androidProps": true,
+  "installdir": "",
+  "files": [
+    {"filename":"window_taskbar.dll","origname":"extensions\\window_taskbar.dll","init":"","final":"","kind":1,"uncompress":false,"functions":[
+        {"externalName":"window_progress_raw","kind":11,"help":"","hidden":true,"returnType":2,"argCount":1,"args":[
+            1,
+          ],"resourceVersion":"1.0","name":"window_progress_raw","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"window_flash_raw","kind":11,"help":"","hidden":true,"returnType":2,"argCount":1,"args":[
+            1,
+          ],"resourceVersion":"1.0","name":"window_flash_raw","tags":[],"resourceType":"GMExtensionFunction",},
+      ],"constants":[
+        {"value":"0","hidden":false,"resourceVersion":"1.0","name":"window_progress_none","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"1","hidden":false,"resourceVersion":"1.0","name":"window_progress_unknown","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"2","hidden":false,"resourceVersion":"1.0","name":"window_progress_normal","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"4","hidden":false,"resourceVersion":"1.0","name":"window_progress_error","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"8","hidden":false,"resourceVersion":"1.0","name":"window_progress_paused","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"0","hidden":false,"resourceVersion":"1.0","name":"window_flash_stop","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"1","hidden":false,"resourceVersion":"1.0","name":"window_flash_window","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"2","hidden":false,"resourceVersion":"1.0","name":"window_flash_tray","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"3","hidden":false,"resourceVersion":"1.0","name":"window_flash_all","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"4","hidden":false,"resourceVersion":"1.0","name":"window_flash_timer","tags":[],"resourceType":"GMExtensionConstant",},
+        {"value":"12","hidden":false,"resourceVersion":"1.0","name":"window_flash_timernofg","tags":[],"resourceType":"GMExtensionConstant",},
+      ],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
+        {"name":"window_progress_raw","path":"extensions/window_taskbar/window_taskbar.yy",},
+        {"name":"window_flash_raw","path":"extensions/window_taskbar/window_taskbar.yy",},
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"window_taskbar.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
+        {"externalName":"window_taskbar_prepare_buffer","kind":2,"help":"window_taskbar_prepare_buffer(size:int)->buffer~","hidden":false,"returnType":2,"argCount":1,"args":[
+            2,
+          ],"resourceVersion":"1.0","name":"window_taskbar_prepare_buffer","tags":[],"resourceType":"GMExtensionFunction",},
+      ],"constants":[
+        
+      ],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
+        {"name":"window_taskbar_prepare_buffer","path":"extensions/window_taskbar/window_taskbar.yy",},
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"autogen.gml","origname":"extensions\\autogen.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
+        {"externalName":"window_progress","kind":2,"help":"window_progress(status:int, current:int = 0, total:int = 0)->bool","hidden":false,"returnType":2,"argCount":-1,"args":[],"resourceVersion":"1.0","name":"window_progress","tags":[],"resourceType":"GMExtensionFunction",},
+        {"externalName":"window_flash","kind":2,"help":"window_flash(flags:int, count:int = 0, freq:int = 0)->bool","hidden":false,"returnType":2,"argCount":-1,"args":[],"resourceVersion":"1.0","name":"window_flash","tags":[],"resourceType":"GMExtensionFunction",},
+      ],"constants":[
+        
+      ],"ProxyFiles":[],"copyToTargets":-1,"order":[
+        {"name":"window_progress","path":"extensions/window_taskbar/window_taskbar.yy",},
+        {"name":"window_flash","path":"extensions/window_taskbar/window_taskbar.yy",},
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+  ],
+  "classname": "",
+  "tvosclassname": "",
+  "tvosdelegatename": "",
+  "iosdelegatename": "",
+  "androidclassname": "",
+  "sourcedir": "",
+  "androidsourcedir": "",
+  "macsourcedir": "",
+  "maccompilerflags": "",
+  "tvosmaccompilerflags": "",
+  "maclinkerflags": "",
+  "tvosmaclinkerflags": "",
+  "iosplistinject": "",
+  "tvosplistinject": "",
+  "androidinject": "",
+  "androidmanifestinject": "",
+  "androidactivityinject": "",
+  "gradleinject": "",
+  "iosSystemFrameworkEntries": [],
+  "tvosSystemFrameworkEntries": [],
+  "iosThirdPartyFrameworkEntries": [],
+  "tvosThirdPartyFrameworkEntries": [],
+  "IncludedResources": [],
+  "androidPermissions": [],
+  "copyToTargets": 113497714299118,
+  "iosCocoaPods": "",
+  "tvosCocoaPods": "",
+  "iosCocoaPodDependencies": "",
+  "tvosCocoaPodDependencies": "",
+  "parent": {
+    "name": "Extensions",
+    "path": "folders/Extensions.yy",
+  },
+  "resourceVersion": "1.2",
+  "name": "window_taskbar",
+  "tags": [],
+  "resourceType": "GMExtension",
+}

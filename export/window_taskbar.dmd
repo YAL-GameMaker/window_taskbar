@@ -1,0 +1,99 @@
+```set template default.html```
+```set title window_taskbar cheat sheet```
+```set autoapi ext```
+```set mainclass boxtt```
+```set intro
+This is a "cheat sheet" for "window_taskbar" extension by YellowAfterlife.\
+The extension can be found on [itch.io](https://yellowafterlife.itch.io/gamemaker-window_taskbar)
+and [GitHub](https://github.com/YAL-GameMaker/window_taskbar).
+```
+```gmlapi
+window_progress_none = 0
+window_progress_unknown = 1
+window_progress_normal = 2
+window_progress_error = 4
+window_progress_paused = 8
+window_flash_stop = 0
+window_flash_window = 1
+window_flash_tray = 2
+window_flash_all = 3
+window_flash_timer = 4
+window_flash_timernofg = 12
+window_progress(status:int, current:int = 0, total:int = 0)->bool
+window_flash(flags:int, count:int = 0, freq:int = 0)->bool
+```
+#[window_flash(flags, ?count, ?frequency)->]() {
+    Flashes the game window and/or its taskbar button.
+    
+    `flags` can be: --{
+    --  `window_flash_window`\
+        Flashes the window
+    --  `window_flash_tray`\
+        Flashes the taskbar button
+    --  `window_flash_all`\
+        Flashes both the window and the taskbar button
+    --  `window_flash_timer`\
+        Flashes continuously until told to stop
+    --  `window_flash_timernofg`\
+        Flashes continuously until told to stop or until the game window regains focus.
+    --  `window_flash_stop`\
+        Stops any current flashing
+    }
+    These can be combined together.
+    
+    `count` is the number of times to flash.\
+    Defaults to `0` if not provided.
+    
+    `frequency` is the delay between flashes, in milliseconds.
+    Leave as `0` o
+    
+    Returns whether successful (read: whether the DLL is loaded).
+    
+    Examples:
+    ```
+    // Start flashing:
+    window_flash(window_flash_all|window_flash_timer);
+    
+    // Stop flashing:
+    window_flash(window_flash_stop);
+    
+    // Flash 3 times at default pace:
+    window_flash(window_flash_all, 3);
+    
+    // Flash title bar 2 times slowly:
+    window_flash(window_flash_window, 2, 700);
+    
+    // Flash taskbar button 5 times quickly:
+    window_flash(window_flash_tray, 5, 150);
+    
+    // Flash window and taskbar until the window has focus (if it doesn't right yet):
+    window_flash(window_flash_all|window_flash_timernofg);
+    ```
+}
+#[window_progress(status, ?current, ?total)->]() {
+    Changes the game window taskbar button's progress state.
+    
+    `status` can be: --{
+    -- `window_progress_none`\
+        No progress shown (default)
+    -- `window_progress_unknown`\
+        Undetermined progress.
+        Shown as either an animation on the taskbar button,
+        or just a green line overlay (Win10).
+    -- `window_progress_normal`\
+        The kind you see when a web browser is downloading a file. Usually green.
+    -- `window_progress_paused`\
+        The kind you see when pausing a file download. Usually yellow/orange.
+    -- `window_progress_error`\
+        The kind you see when there is a download error. Usually red.
+    }
+    
+    Examples:
+    ```
+    window_progress(window_progress_none);
+    window_progress(window_progress_unknown);
+    window_progress(window_progress_normal, 1, 3);
+    window_progress(window_progress_paused, 2, 4);
+    window_progress(window_progress_error, 5, 7);
+    ```
+}
